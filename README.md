@@ -1,5 +1,3 @@
-![](./wicked.png)
-
 # Step-By-Step Wizard Controllers
 
 [![Build Status](https://github.com/zombocom/wicked/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/zombocom/wicked)
