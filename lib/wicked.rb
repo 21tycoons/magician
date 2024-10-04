@@ -3,9 +3,9 @@ require 'active_support/concern'
 require 'active_support/core_ext/object/blank'
 
 module Wicked
-  FINISH_STEP = "step--finish"
   FIRST_STEP  = "step--first"
   LAST_STEP   = "step--last"
+  FINISH_STEP = "step--finish"
 
   module Controller
     module Concerns
