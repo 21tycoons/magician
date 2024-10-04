@@ -3,9 +3,9 @@ require 'active_support/concern'
 require 'active_support/core_ext/object/blank'
 
 module Wicked
-  FINISH_STEP = "wicked_finish"
-  FIRST_STEP  = "wicked_first"
-  LAST_STEP   = "wicked_last"
+  FINISH_STEP = "step--finish"
+  FIRST_STEP  = "step--first"
+  LAST_STEP   = "step--last"
 
   module Controller
     module Concerns
@@ -16,8 +16,8 @@ module Wicked
   autoload :WizardController, "wicked/wizard_controller"
 end
 
-class WickedError < StandardError; end
-class WickedProtectedStepError < WickedError; end
+class Error < StandardError; end
+class ProtectedStepError < Error; end
 
 require 'wicked/controller/concerns/render_redirect'
 require 'wicked/controller/concerns/steps'
