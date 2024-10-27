@@ -469,12 +469,6 @@ Most problems using this library are general problems using Ruby/Rails. If you c
 
 If you've found a bug, please open a ticket on the issue tracker with a small example app that reproduces the behavior.
 
-## About
-
-Made by [@schneems](http://twitter.com/schneems).
-
-This project rocks and uses MIT-LICENSE.
-
 ## Compatibility
 
 Refer to the Travis CI test matrix for test using your version of Ruby and Rails. If there is a newer Ruby or Rails you don't see on there, please add an entry to the Appraisals file, then run `$ appraisals install` and update the `.travis.yml` file and send me a pull request.
@@ -512,5 +506,3 @@ Note that Rails 3.0 tests don't pass in Ruby 2.0.0 or newer, so during developme
 gemfile if you are using a current version of Ruby.
 
 ## Contributing
-
-See the [Contributing guide](https://github.com/schneems/wicked/blob/master/CONTRIBUTING.md).
