@@ -14,11 +14,11 @@ module Wicked
   module Wizard
   end
   autoload :WizardController, "wicked/wizard_controller"
-end
 
-class WizardError < StandardError; end
-class StepError < WizardError; end
-class ProtectedStepError < StepError; end
+  class WizardError < StandardError; end
+  class StepError < WizardError; end
+  class ProtectedStepError < StepError; end
+end
 
 require 'wicked/controller/concerns/render_redirect'
 require 'wicked/controller/concerns/steps'
