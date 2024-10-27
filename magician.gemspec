@@ -1,15 +1,15 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'wicked/version'
+require 'magician/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "wicked"
-  gem.version       = Wicked::VERSION
-  gem.authors       = ["Richard Schneeman"]
-  gem.email         = ["richard.schneeman+rubygems@gmail.com"]
-  gem.description   = "Wicked is a Rails engine for producing easy wizard controllers"
-  gem.summary       = "Use Wicked to turn your controller into a wizard"
+  gem.name          = "magician"
+  gem.version       = Magician::VERSION
+  gem.authors       = [""]
+  gem.email         = [""]
+  gem.description   = "Magician is a Rails engine for producing easy wizard controllers"
+  gem.summary       = "Use Magician to turn your controller into a wizard"
   gem.homepage      = "https://github.com/schneems/wicked"
   gem.license       = "MIT"
   gem.extra_rdoc_files = [

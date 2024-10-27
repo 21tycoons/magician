@@ -2,7 +2,7 @@ require 'erb'
 require 'active_support/concern'
 require 'active_support/core_ext/object/blank'
 
-module Wicked
+module Magician
   FIRST_STEP  = "step--first"
   LAST_STEP   = "step--last"
   FINISH_STEP = "step--finish"
@@ -22,10 +22,10 @@ module Wicked
   class ProtectedStepError < StepError; end
 end
 
-require 'wicked/controller/concerns/render_redirect'
-require 'wicked/controller/concerns/steps'
-require 'wicked/controller/concerns/path'
-require 'wicked/controller/concerns/action'
-require 'wicked/wizard'
-require 'wicked/wizard/translated'
-require 'wicked/engine'
+require 'magician/controller/concerns/render_redirect'
+require 'magician/controller/concerns/steps'
+require 'magician/controller/concerns/path'
+require 'magician/controller/concerns/action'
+require 'magician/wizard'
+require 'magician/wizard/translated'
+require 'magician/engine'
