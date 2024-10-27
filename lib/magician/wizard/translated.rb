@@ -1,8 +1,8 @@
-module Wicked
+module Magician
   module Wizard
     module Translated
       extend ActiveSupport::Concern
-      include Wicked::Wizard
+      include Magician::Wizard
 
       included do
         skip_before_action :setup_wizard

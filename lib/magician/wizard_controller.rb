@@ -2,8 +2,8 @@
 # they work, but are not very good practices.
 # If you have a better way to do this, please let me know
 
-class Wicked::WizardController < ApplicationController
-  include Wicked::Wizard
+class Magician::WizardController < ApplicationController
+  include Magician::Wizard
 
   # def index
   #   # redirect_to_first_step

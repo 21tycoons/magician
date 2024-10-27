@@ -1,4 +1,4 @@
-module Wicked
+module Magician
   module Wizard
     extend ActiveSupport::Concern
 
