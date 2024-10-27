@@ -16,8 +16,8 @@ module Wicked
   autoload :WizardController, "wicked/wizard_controller"
 end
 
-class Error < StandardError; end
-class ProtectedStepError < Error; end
+class StepError < StandardError; end
+class ProtectedStepError < StepError; end
 
 require 'wicked/controller/concerns/render_redirect'
 require 'wicked/controller/concerns/steps'
