@@ -20,7 +20,7 @@ module Magician
 
   class WizardError < StandardError; end
   class StepError < WizardError; end
-  class ProtectedStepError < StepError; end
+  class ProtectedStepError < WizardError; end
 end
 
 require 'magician/controller/concerns/render_redirect'
