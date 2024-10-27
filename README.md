@@ -1,12 +1,5 @@
 # Step-By-Step Wizard Controllers
 
-[![Build Status](https://github.com/zombocom/wicked/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/zombocom/wicked)
-[![Code Climate](https://codeclimate.com/github/schneems/wicked/badges/gpa.svg)](https://codeclimate.com/github/schneems/wicked)
-[![Help Contribute to Open Source](https://www.codetriage.com/schneems/wicked/badges/users.svg)](https://www.codetriage.com/schneems/wicked)
-
-
-Use wicked to make your Rails controllers into step-by-step wizards. To see Wicked in action check out the example [Rails app](https://github.com/schneems/wicked_example) or [watch the screencast](http://schneems.com/post/18437886598/wizard-ify-your-rails-controllers-with-wicked).
-
 ## Why
 
 Many times I'm left wanting a RESTful way to display a step by step process that may or not be associated with a resource. Wicked gives the flexibility to do what I want while hiding all the really nasty stuff you shouldn't do in a controller to make this possible. At its core Wicked is a RESTful(ish) state machine, but you don't need to know that, just use it.
