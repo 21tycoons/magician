@@ -11,8 +11,10 @@ module Wicked
     module Concerns
     end
   end
+
   module Wizard
   end
+
   autoload :WizardController, "wicked/wizard_controller"
 
   class WizardError < StandardError; end
