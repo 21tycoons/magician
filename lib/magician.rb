@@ -15,7 +15,7 @@ module Magician
   module Wizard
   end
 
-  autoload :WizardController, "wicked/wizard_controller"
+  autoload :WizardController, "magician/wizard_controller"
 
   class WizardError < StandardError; end
   class StepError < WizardError; end
