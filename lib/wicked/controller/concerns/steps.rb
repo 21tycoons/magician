@@ -3,8 +3,8 @@ module Wicked::Controller::Concerns::Steps
 
   extend ActiveSupport::Concern
 
-  def jump_to(goto_step, options = {})
-    @skip_to                = goto_step
+  def jump_to(go_to_step, options = {})
+    @skip_to                = go_to_step
     @wicked_redirect_params = options
   end
 
