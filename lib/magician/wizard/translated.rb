@@ -8,7 +8,7 @@ module Magician
         skip_before_action :setup_wizard
         before_action :setup_wizard_translated
 
-        helper_method      :wizard_translate, :wizard_value
+        helper_method :wizard_translate, :wizard_value
       end
 
       # creates a hash where keys are translated steps, values are the name of the view file
