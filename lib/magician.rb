@@ -4,6 +4,7 @@ require 'active_support/core_ext/object/blank'
 
 module Magician
   FIRST_STEP  = "step--first"
+  MIDDLE_STEP = "step--middle"
   LAST_STEP   = "step--last"
   FINISH_STEP = "step--finish"
 
