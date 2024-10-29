@@ -27,7 +27,7 @@ module Magician::Controller::Concerns::Path
 
   def wizard_path(go_to_step = nil, options = {})
     options = options.respond_to?(:to_h) ? options.to_h : options
-    options = { :controller => wicked_controller,
+    options = { :controller => magician_controller,
                 :action     => 'show',
                 :id         => go_to_step || params[:id],
                 :only_path  => true
