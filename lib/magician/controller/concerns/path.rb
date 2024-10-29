@@ -25,17 +25,17 @@ module Magician::Controller::Concerns::Path
     params[:action]
   end
 
-  def wizard_path(goto_step = nil, options = {})
+  def wizard_path(go_to_step = nil, options = {})
     options = options.respond_to?(:to_h) ? options.to_h : options
     options = { :controller => wicked_controller,
                 :action     => 'show',
-                :id         => goto_step || params[:id],
+                :id         => go_to_step || params[:id],
                 :only_path  => true
                }.merge options
     url_for(options)
   end
 
-  def wizard_url(goto_step = nil, options = {})
-    wizard_path(goto_step, options.merge(only_path: false))
+  def wizard_url(go_to_step = nil, options = {})
+    wizard_path(go_to_step, options.merge(only_path: false))
   end
 end
