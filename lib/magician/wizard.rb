@@ -44,44 +44,46 @@ module Magician
       step_name
     end
 
-    private def initialize_wicked_variables
-      @skip_to = nil
-      @wicked_redirect_params = nil
-    end
+    private
 
-    private def check_redirect_to_first_last!(step)
-      redirect_to wizard_path(steps.first) if step.to_s == Wicked::FIRST_STEP
-      redirect_to wizard_path(steps.last)  if step.to_s == Wicked::LAST_STEP
-    end
-
-    private def setup_step_from(the_step)
-      return if steps.nil?
-
-      the_step ||= steps.first
-      check_redirect_to_first_last!(the_step)
-
-      valid_steps = steps + self.class::PROTECTED_STEPS
-      resolved_step = valid_steps.detect { |stp| stp.to_s == the_step }
-
-      raise InvalidStepError.new(the_step) if resolved_step.nil?
-      resolved_step
-    end
-
-    private def check_steps!
-      raise UndefinedStepsError if steps.nil?
-    end
-
-    private def set_previous_next(step)
-      @previous_step = previous_step(step)
-      @next_step     = next_step(step)
-    end
-
-    private def setup_wizard
-      check_steps!
-      return if params[:id].nil?
-
-      @step = setup_step_from(params[:id])
-      set_previous_next(@step)
-    end
+      def initialize_wicked_variables
+        @skip_to = nil
+        @wicked_redirect_params = nil
+      end
+  
+      private def check_redirect_to_first_last!(step)
+        redirect_to wizard_path(steps.first) if step.to_s == Wicked::FIRST_STEP
+        redirect_to wizard_path(steps.last)  if step.to_s == Wicked::LAST_STEP
+      end
+  
+      def setup_step_from(the_step)
+        return if steps.nil?
+  
+        the_step ||= steps.first
+        check_redirect_to_first_last!(the_step)
+  
+        valid_steps = steps + self.class::PROTECTED_STEPS
+        resolved_step = valid_steps.detect { |stp| stp.to_s == the_step }
+  
+        raise InvalidStepError.new(the_step) if resolved_step.nil?
+        resolved_step
+      end
+  
+      def check_steps!
+        raise UndefinedStepsError if steps.nil?
+      end
+  
+      def set_previous_next(step)
+        @previous_step = previous_step(step)
+        @next_step     = next_step(step)
+      end
+  
+      def setup_wizard
+        check_steps!
+        return if params[:id].nil?
+  
+        @step = setup_step_from(params[:id])
+        set_previous_next(@step)
+      end
   end
 end
