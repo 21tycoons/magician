@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MagicianTest < ActiveSupport::TestCase
   test "truth" do
-    assert_kind_of Module, Wicked
+    assert_kind_of Module, Magician
   end
 
   test "protected steps" do
