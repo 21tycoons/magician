@@ -91,15 +91,17 @@ module Magician::Controller::Concerns::Steps
     step  ||= Magician::FINISH_STEP
   end
 
-  private def step_index_for(step_name)
-    steps.index(step_name)
-  end
+  private
 
-  private def current_step_index
-    step_index_for(step)
-  end
+    def step_index_for(step_name)
+      steps.index(step_name)
+    end
 
-  private def current_and_given_step_exists?(step_name)
-    current_step_index.present? && steps.index(step_name).present?
-  end
+    def current_step_index
+      step_index_for(step)
+    end
+
+    def current_and_given_step_exists?(step_name)
+      current_step_index.present? && steps.index(step_name).present?
+    end
 end
