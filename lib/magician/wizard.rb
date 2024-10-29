@@ -46,9 +46,9 @@ module Magician
 
     private
 
-      def initialize_wicked_variables
+      def initialize_magician_variables
         @skip_to = nil
-        @wicked_redirect_params = nil
+        @magician_redirect_params = nil
       end
   
       private def check_redirect_to_first_last!(step)
