@@ -17,11 +17,11 @@ module Magician::Controller::Concerns::Path
     wizard_url(@previous_step, options)
   end
 
-  def wicked_controller
+  def magician_controller
     params[:controller]
   end
 
-  def wicked_action
+  def magician_action
     params[:action]
   end
 
