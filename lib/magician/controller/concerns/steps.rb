@@ -1,5 +1,6 @@
 module Magician::Controller::Concerns::Steps
-  PROTECTED_STEPS = [Magician::FINISH_STEP, Magician::FIRST_STEP, Magician::MIDDLE_STEP, Magician::LAST_STEP]
+  PROTECTED_STEPS = [Magician::FINISH_STEP, Magician::FIRST_STEP,
+                     Magician::MIDDLE_STEP, Magician::LAST_STEP]
 
   extend ActiveSupport::Concern
 
