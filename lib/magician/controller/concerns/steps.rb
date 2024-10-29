@@ -88,7 +88,7 @@ module Magician::Controller::Concerns::Steps
     return @next_step if current_step.nil?
     index = steps.index(current_step)
     step  = steps.at(index + 1) if index.present?
-    step  ||= Wicked::FINISH_STEP
+    step  ||= Magician::FINISH_STEP
   end
 
   private def step_index_for(step_name)
