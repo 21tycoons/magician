@@ -6,12 +6,12 @@ module Magician::Controller::Concerns::Steps
 
   def jump_to(go_to_step, options = {})
     @skip_to_step           = go_to_step
-    @wicked_redirect_params = options
+    @magician_redirect_params = options
   end
 
   def skip_step(options = {})
     @skip_to_step           = @next_step
-    @wicked_redirect_params = options
+    @magician_redirect_params = options
   end
 
   def step
@@ -62,7 +62,7 @@ module Magician::Controller::Concerns::Steps
       string_steps = wizard_steps.map(&:to_s)
       if protected_step = PROTECTED_STEPS.detect { |protected| string_steps.include?(protected) }
         msg = "Protected step detected: '#{protected_step}' is used internally by Wicked please rename your step"
-        raise WickedProtectedStepError, msg
+        raise MagicianProtectedStepError, msg
       end
     end
   end
