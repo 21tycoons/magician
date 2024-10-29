@@ -5,12 +5,12 @@ module Magician::Controller::Concerns::Path
     wizard_path(@next_step, options)
   end
 
-  def next_wizard_url(options = {})
-    wizard_url(@next_step, options)
-  end
-
   def previous_wizard_path(options = {})
     wizard_path(@previous_step, options)
+  end
+
+  def next_wizard_url(options = {})
+    wizard_url(@next_step, options)
   end
 
   def previous_wizard_url(options = {})
