@@ -8,7 +8,7 @@ class MagicianTest < ActiveSupport::TestCase
   test "protected steps" do
     error = assert_raise ProtectedStepError do
       class ProtectedBadStepsController < ApplicationController
-        include Wicked::Wizard
+        include Magician::Wizard
 
         steps :whatever, Magician::FINISH_STEP
       end
