@@ -31,7 +31,7 @@ module Magician::Controller::Concerns::RenderRedirect
   end
 
   def render_step(the_step, options = {}, params = {})
-    if the_step.nil? || the_step.to_s == Wicked::FINISH_STEP
+    if the_step.nil? || the_step.to_s == Magician::FINISH_STEP
       redirect_to_finish_wizard options, params
     else
       render the_step, options
