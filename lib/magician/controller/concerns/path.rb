@@ -1,4 +1,4 @@
-module Wicked::Controller::Concerns::Path
+module Magician::Controller::Concerns::Path
   extend ActiveSupport::Concern
 
   def next_wizard_path(options = {})

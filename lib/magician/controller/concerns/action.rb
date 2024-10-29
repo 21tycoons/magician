@@ -1,4 +1,4 @@
-module Wicked::Controller::Concerns::Action
+module Magician::Controller::Concerns::Action
   extend ActiveSupport::Concern
 
   module ClassMethods

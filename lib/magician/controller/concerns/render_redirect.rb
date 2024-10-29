@@ -1,4 +1,4 @@
-module Wicked::Controller::Concerns::RenderRedirect
+module Magician::Controller::Concerns::RenderRedirect
   extend ActiveSupport::Concern
 
   def render_wizard(resource = nil, options = {}, params = {})

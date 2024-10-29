@@ -1,4 +1,4 @@
-module Wicked::Controller::Concerns::Steps
+module Magician::Controller::Concerns::Steps
   PROTECTED_STEPS = [Wicked::FINISH_STEP, Wicked::FIRST_STEP, Wicked::LAST_STEP]
 
   extend ActiveSupport::Concern
