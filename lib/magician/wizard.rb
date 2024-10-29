@@ -19,12 +19,12 @@ module Magician
     end
 
     # Include the modules!!
-    include Wicked::Controller::Concerns::Path
-    include Wicked::Controller::Concerns::RenderRedirect
-    include Wicked::Controller::Concerns::Steps
+    include Magician::Controller::Concerns::Path
+    include Magician::Controller::Concerns::RenderRedirect
+    include Magician::Controller::Concerns::Steps
 
     included do
-      include Wicked::Controller::Concerns::Action
+      include Magician::Controller::Concerns::Action
       # Give our Views helper methods!
       helper_method :wizard_path, :wizard_url, :next_wizard_path, :next_wizard_url, :previous_wizard_path,
                     :previous_wizard_url, :step, :wizard_steps, :current_step?, :past_step?, :future_step?,
