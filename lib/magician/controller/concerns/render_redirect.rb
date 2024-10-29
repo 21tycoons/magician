@@ -5,7 +5,7 @@ module Magician::Controller::Concerns::RenderRedirect
     process_resource!(resource, options)
 
     if @skip_to
-      url_params = (@wicked_redirect_params || {}).merge(params)
+      url_params = (@magician_redirect_params || {}).merge(params)
       redirect_to wizard_path(@skip_to, url_params), options
     else
       render_step(wizard_value(step), options, params)
