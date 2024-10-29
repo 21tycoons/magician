@@ -62,7 +62,7 @@ module Magician::Controller::Concerns::Steps
       string_steps = wizard_steps.map(&:to_s)
       if protected_step = PROTECTED_STEPS.detect { |protected| string_steps.include?(protected) }
         msg = "Protected step detected: '#{protected_step}' is used internally by Wicked please rename your step"
-        raise MagicianProtectedStepError, msg
+        raise Magician::ProtectedStepError, msg
       end
     end
   end
