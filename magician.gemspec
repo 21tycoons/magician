@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'magician/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "magician"
+  gem.name          = "magician_wizard"
   gem.version       = Magician::VERSION
   gem.authors       = [""]
   gem.email         = [""]
