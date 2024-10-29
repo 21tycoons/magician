@@ -13,6 +13,6 @@ class MagicianTest < ActiveSupport::TestCase
         steps :whatever, Magician::FINISH_STEP
       end
     end
-    assert_equal "Protected step detected: '#{Magician::FINISH_STEP}' is used internally by Wicked please rename your step", error.message
+    assert_equal "Protected step detected: '#{Magician::FINISH_STEP}' is used internally by Magician please rename your step", error.message
   end
 end
