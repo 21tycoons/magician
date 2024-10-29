@@ -18,9 +18,9 @@ module Magician
 
   autoload :WizardController, "magician/wizard_controller"
 
-  class WizardError < StandardError; end
-  class StepError < WizardError; end
-  class ProtectedStepError < WizardError; end
+  class Error < StandardError; end
+  class StepError < Error; end
+  class ProtectedStepError < Error; end
 end
 
 require 'magician/controller/concerns/render_redirect'
